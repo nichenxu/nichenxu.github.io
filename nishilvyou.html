@@ -2,13 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-<<<<<<< HEAD
         <script src="js/animate.js"></script>
 <style type="text/css">
    	/*重置浏览器样式*/
-=======
-        <style type="text/css">
->>>>>>> 461c7ceab69e9b9e70668e6a3379438fd57d78ad
 * {
   padding: 0;
   margin: 0;
@@ -812,15 +808,12 @@ td {
 		            <td>华东五市</td>
 		        </tr>
 	    	</table>
-<<<<<<< HEAD
 	    	<div id="donghua">
 				<img src="img/17.jpg" width="200px" height="200px">
 	    	</div>
 	    </div>
 	    
-=======
 	    </div>
->>>>>>> 461c7ceab69e9b9e70668e6a3379438fd57d78ad
     	<div class="footer clear">
     		<img src="img/16.png" width="150px" height="150px">
 			<div class="footer1">
@@ -855,8 +848,6 @@ td {
         var index = 1;
         var timer;
         var isMoving = false;
-<<<<<<< HEAD
-=======
         box.onmouseover = function(){
             animate(left,{opacity:50})
             animate(right,{opacity:50})
@@ -867,7 +858,6 @@ td {
             animate(right,{opacity:0})
             timer = setInterval(next, 3000);
         }
->>>>>>> 461c7ceab69e9b9e70668e6a3379438fd57d78ad
         right.onclick = next;
         left.onclick = prev;
         for( var i=0; i<oNavlist.length; i++ ){
@@ -878,10 +868,7 @@ td {
                 animate(slider,{left:-1200*index});
             }
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> 461c7ceab69e9b9e70668e6a3379438fd57d78ad
         function next(){
             if(isMoving){
                 return;
@@ -897,10 +884,8 @@ td {
                 isMoving = false;
             });
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> 461c7ceab69e9b9e70668e6a3379438fd57d78ad
+
         function prev(){
             if(isMoving){
                 return;
@@ -916,10 +901,8 @@ td {
                 isMoving = false;
             });
         }
-<<<<<<< HEAD
-        
-=======
->>>>>>> 461c7ceab69e9b9e70668e6a3379438fd57d78ad
+    
+
         function navmove(){
             for( var i=0; i<oNavlist.length; i++ ){
                 oNavlist[i].className = "";
@@ -932,7 +915,6 @@ td {
                 oNavlist[index-1].className = "active";
             }
         }
-<<<<<<< HEAD
         
         //鼠标划入清定时器
 	    box.onmouseover = function(){
@@ -947,46 +929,6 @@ td {
 	        timer = setInterval(next, 2000);
 	    }
 
-=======
-
-        function getStyle(obj, attr){
-			if(obj.currentStyle){
-				return obj.currentStyle[attr];
-			} else {
-				return getComputedStyle(obj, null)[attr];
-			}
-		}
-		function animate(obj,json,callback){
-			clearInterval(obj.timer);
-			obj.timer = setInterval(function(){
-				var isStop = true;
-				for(var attr in json){
-					var now = 0;
-					if(attr == 'opacity'){
-						now = parseInt(getStyle(obj,attr)*100);
-					}else{
-						now = parseInt(getStyle(obj,attr));
-					}
-					var speed = (json[attr] - now) / 8;
-					speed = speed>0?Math.ceil(speed):Math.floor(speed);
-					var cur = now + speed;
-					if(attr == 'opacity'){
-						obj.style[attr] = cur / 100;
-					}else{
-						obj.style[attr] = cur + 'px';
-					}
-					if(json[attr] !== cur){
-						isStop = false;
-					}
-				}
-				if(isStop){
-					clearInterval(obj.timer);
-					callback&&callback();
-				}
-			}, 30)
-		}
-        
->>>>>>> 461c7ceab69e9b9e70668e6a3379438fd57d78ad
 
         //点击登录或注册按钮 一秒后 跳转到相应的页面
         timer = setInterval(next, 3000);
@@ -1004,7 +946,6 @@ td {
         }
 
 
-<<<<<<< HEAD
         //动画基础
         var st = "匀速";
         var donghua = document.getElementById("donghua");
@@ -1046,8 +987,6 @@ td {
         }
 
 
-=======
->>>>>>> 461c7ceab69e9b9e70668e6a3379438fd57d78ad
         //点击不喜欢该推荐 删除该推荐
         var arr =document.getElementsByClassName("button");
         console.log(arr[0]);
